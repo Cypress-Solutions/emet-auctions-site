@@ -3,10 +3,9 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import AuctionCategories from '@/components/AuctionCategories';
+import CurrentItems from '@/components/CurrentItems';
 import HowItWorks from '@/components/HowItWorks';
-import FeaturedAuctions from '@/components/FeaturedAuctions';
-import Testimonials from '@/components/Testimonials';
+import SellForm from '@/components/SellForm';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -16,10 +15,9 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      <AuctionCategories />
+      <CurrentItems />
       <HowItWorks />
-      <FeaturedAuctions />
-      <Testimonials />
+      <SellForm />
       <ContactSection />
       <Footer />
     </div>

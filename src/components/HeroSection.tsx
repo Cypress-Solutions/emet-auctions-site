@@ -12,35 +12,35 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative h-screen w-full bg-hero-pattern bg-cover bg-center flex items-center">
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-purple-dark/80 to-brand-purple/90"></div>
+    <section className="relative h-screen w-full bg-[#5e17eb] flex items-center">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#5e17eb]/80 to-[#5e17eb]/90"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto md:mx-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 animate-fade-up">
-            Exceptional Items, <br />
-            <span className="text-brand-gold">Extraordinary</span> Experiences
+            Turning Your Unwanted Goods <br />
+            Into Someone Else's <span className="text-brand-gold">Treasure</span>
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-xl animate-fade-up [animation-delay:200ms]">
-            Join our exclusive community of collectors and enthusiasts. 
-            Discover premium, verified items and participate in transparent auction processes.
+            Buy, Sell, or Bid – All in One Place. Let us help you find the perfect match for your items.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up [animation-delay:400ms]">
             <Button 
               size="lg" 
-              className="bg-brand-gold text-brand-purple-dark hover:bg-white hover:text-brand-purple-dark transition-all"
+              onClick={() => scrollToSection('#current-items')}
+              className="bg-white text-[#5e17eb] hover:bg-white/90 transition-all"
             >
-              Explore Auctions
+              Browse Items
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white/10"
-              onClick={() => scrollToSection('#about')}
+              onClick={() => scrollToSection('#sell-form')}
             >
-              Learn More
+              Sell Your Items
             </Button>
           </div>
         </div>
