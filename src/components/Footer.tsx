@@ -1,32 +1,23 @@
-
 import React from 'react';
 import { Link } from 'lucide-react';
-
 const Footer: React.FC = () => {
-  return (
-    <footer className="bg-[#030009] text-white pt-16 pb-8">
+  return <footer className="bg-[#030009] text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              EMET<span className="text-brand-gold">Auctions</span>
+              EMET<span className="text-brand-gold"> Auctions</span>
             </h3>
             <p className="text-white/70 mb-4">
               Connecting collectors with extraordinary items through transparent, 
               secure auction processes.
             </p>
             <div className="flex space-x-4 mt-6">
-              {['facebook', 'instagram', 'twitter', 'linkedin'].map((social) => (
-                <a 
-                  key={social}
-                  href={`#${social}`} 
-                  className="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors"
-                >
+              {['facebook', 'instagram', 'twitter', 'linkedin'].map(social => <a key={social} href={`#${social}`} className="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">
                   <span className="sr-only">{social}</span>
                   <Link size={16} />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
           
@@ -49,15 +40,8 @@ const Footer: React.FC = () => {
               Subscribe to receive notifications about upcoming auctions.
             </p>
             <form className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="bg-white/10 text-white px-4 py-2 rounded-l outline-none focus:bg-white/20 transition-colors flex-1"
-              />
-              <button 
-                type="submit" 
-                className="bg-brand-gold text-brand-purple-dark px-4 py-2 rounded-r font-medium hover:bg-white transition-colors"
-              >
+              <input type="email" placeholder="Your email" className="bg-white/10 text-white px-4 py-2 rounded-l outline-none focus:bg-white/20 transition-colors flex-1" />
+              <button type="submit" className="bg-brand-gold text-brand-purple-dark px-4 py-2 rounded-r font-medium hover:bg-white transition-colors">
                 Join
               </button>
             </form>
@@ -83,8 +67,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
