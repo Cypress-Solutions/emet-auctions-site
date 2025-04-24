@@ -1,7 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import SellForm from './SellForm';
 
 const CurrentItems: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="current-items" className="relative py-32 overflow-hidden">
       {/* Premium animated background */}
@@ -20,12 +25,22 @@ const CurrentItems: React.FC = () => {
             Auction Listings Coming Soon
           </h2>
           <div className="w-24 h-1 bg-white/30 mx-auto mb-8"></div>
-          <p className="text-xl text-white/80 leading-relaxed animate-fade-up [animation-delay:200ms]">
-            We're preparing an exclusive collection of premium items for our upcoming auctions. 
-            Stay tuned for extraordinary opportunities to acquire unique pieces.
+          <p className="text-xl text-white/80 leading-relaxed animate-fade-up [animation-delay:200ms] mb-12">
+            Be among the first to showcase your valuable items. Join our exclusive community of sellers and reach premium buyers.
           </p>
+          <Button 
+            size="lg"
+            onClick={() => setIsModalOpen(true)}
+            className="group bg-white text-[#5e17eb] hover:bg-white/90 transition-all duration-500 animate-fade-up [animation-delay:400ms] shadow-lg hover:shadow-white/20 hover:scale-105 hover:-translate-y-1"
+          >
+            Start Selling Now
+            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
       </div>
+
+      {/* Modal for the Sell Form */}
+      <SellForm open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 };

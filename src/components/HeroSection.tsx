@@ -1,7 +1,5 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import SellForm from './SellForm';
 
 const HeroSection: React.FC = () => {
@@ -16,10 +14,8 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative h-screen w-full bg-[#030009] flex flex-col items-center justify-center overflow-hidden">
-      {/* Background with overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#030009]/80 to-[#030009]/90"></div>
       
-      {/* Enhanced animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -right-10 top-10 w-80 h-80 bg-[#5e17eb]/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute left-20 top-40 w-60 h-60 bg-[#5e17eb]/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]"></div>
@@ -27,7 +23,6 @@ const HeroSection: React.FC = () => {
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-        {/* Large Logo */}
         <div className="mb-8 animate-fade-up [animation-delay:200ms]">
           <img 
             src="/lovable-uploads/61c79282-c18e-4001-8fc5-32364efc8512.png" 
@@ -36,7 +31,6 @@ const HeroSection: React.FC = () => {
           />
         </div>
 
-        {/* Full Width EMET Auctions Title */}
         <h1 className="w-full text-center font-bold text-white leading-tight">
           <span className="block text-8xl md:text-9xl lg:text-[160px] mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:400ms]">
             EMET
@@ -66,7 +60,6 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Modal for the Sell Form */}
       <SellForm open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
