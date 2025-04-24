@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { ShoppingBag, ClipboardList, Calendar, CreditCard } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const buyerSteps = [
   {
@@ -58,7 +58,7 @@ const sellerSteps = [
 
 const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-24 bg-white relative overflow-hidden">
+    <section id="how-it-works" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#5e17eb]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#5e17eb]/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
@@ -75,20 +75,20 @@ const HowItWorks: React.FC = () => {
             <h3 className="text-2xl font-semibold text-[#030009] mb-12 text-center">For Buyers</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {buyerSteps.map((step, index) => (
-                <div key={index} className="relative group">
-                  <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-[#5e17eb]/20 hover:translate-y-[-5px]">
+                <Card key={index} className="relative group bg-white hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
                     <div className="bg-[#5e17eb] text-white rounded-full w-12 h-12 flex items-center justify-center mb-6">
                       {step.icon}
                     </div>
                     <div className="text-4xl font-bold text-[#5e17eb] mb-4">{step.number}</div>
                     <h3 className="text-xl font-semibold text-[#030009] mb-3">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
-                  </div>
+                  </CardContent>
                   
                   {index < buyerSteps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/30"></div>
                   )}
-                </div>
+                </Card>
               ))}
             </div>
           </div>
@@ -98,20 +98,20 @@ const HowItWorks: React.FC = () => {
             <h3 className="text-2xl font-semibold text-[#030009] mb-12 text-center">For Sellers</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {sellerSteps.map((step, index) => (
-                <div key={index} className="relative group">
-                  <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-[#5e17eb]/20 hover:translate-y-[-5px]">
+                <Card key={index} className="relative group bg-white hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
                     <div className="bg-[#5e17eb] text-white rounded-full w-12 h-12 flex items-center justify-center mb-6">
                       {step.icon}
                     </div>
                     <div className="text-4xl font-bold text-[#5e17eb] mb-4">{step.number}</div>
                     <h3 className="text-xl font-semibold text-[#030009] mb-3">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
-                  </div>
+                  </CardContent>
                   
                   {index < sellerSteps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/30"></div>
                   )}
-                </div>
+                </Card>
               ))}
             </div>
           </div>

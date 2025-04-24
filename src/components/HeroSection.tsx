@@ -2,6 +2,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award, Gavel, Tag } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import SellForm from './SellForm';
 
 const HeroSection: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -32,8 +34,9 @@ const HeroSection: React.FC = () => {
               className="h-20 animate-fade-up"
             />
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-up [animation-delay:300ms]">
-              Transform Your Unwanted Items Into <span className="text-[#5e17eb]">Treasure</span>
+            <h1 className="font-bold text-white leading-tight animate-fade-up [animation-delay:300ms]">
+              <span className="block text-6xl md:text-7xl lg:text-8xl mb-4">EMET</span>
+              <span className="block text-5xl md:text-6xl lg:text-7xl">Auctions</span>
             </h1>
             
             <p className="text-xl text-white/90 max-w-xl animate-fade-up [animation-delay:600ms]">
@@ -41,20 +44,30 @@ const HeroSection: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up [animation-delay:900ms]">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button 
+                    size="lg" 
+                    className="bg-[#5e17eb] text-white hover:bg-[#4a12c5] transition-all"
+                  >
+                    Sell Your Items
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-bold">Sell Your Items</DialogTitle>
+                  </DialogHeader>
+                  <SellForm />
+                </DialogContent>
+              </Dialog>
+              
               <Button 
                 size="lg" 
-                onClick={() => scrollToSection('#current-items')}
-                className="bg-[#5e17eb] text-white hover:bg-[#4a12c5] transition-all"
+                variant="outline"
+                onClick={() => scrollToSection('#contact')}
+                className="border-[#5e17eb] text-[#5e17eb] bg-white hover:bg-[#5e17eb] hover:text-white"
               >
-                View Items
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-[#5e17eb] text-[#5e17eb] bg-transparent hover:bg-[#5e17eb] hover:text-white"
-                onClick={() => scrollToSection('#sell-form')}
-              >
-                Sell Your Items
+                Request a Callback
               </Button>
             </div>
           </div>
@@ -98,19 +111,6 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-      
-      <button 
-        onClick={() => scrollToSection('#about')}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
-        aria-label="Scroll down"
-      >
-        <ArrowDown size={32} />
-      </button>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
-        <div className="text-white/50 text-sm uppercase tracking-widest animate-pulse">Scroll Down</div>
       </div>
     </section>
   );
