@@ -58,10 +58,11 @@ const sellerSteps = [
 
 const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[#5e17eb]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#5e17eb]/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+    <section id="how-it-works" className="py-24 bg-gradient-to-br from-white via-[#f8f7ff] to-[#5e17eb]/5 relative overflow-hidden">
+      {/* Enhanced decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#5e17eb]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#5e17eb]/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-[#5e17eb]/3 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="text-center mb-16">

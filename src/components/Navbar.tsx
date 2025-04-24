@@ -22,8 +22,9 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/ce8e26a2-dfb1-4d47-8ed2-cf35d7678396.png" alt="EMET Auctions" className="h-10 w-auto" />
+          <a href="#" className="flex items-center space-x-4">
+            <img src="/lovable-uploads/7fd90f24-61ba-4d4c-9889-f111e221065c.png" alt="EMET Auctions" className="h-12 w-auto" />
+            <span className="text-2xl font-bold text-white">EMET Auctions</span>
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -33,7 +34,7 @@ const Navbar: React.FC = () => {
             <a href="#sell-form" className="text-white hover:text-white/80 transition-colors">Sell Items</a>
             <a href="#contact" className="text-white hover:text-white/80 transition-colors">Contact</a>
             <Button className="bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
-              Register Now
+              Call Me
             </Button>
           </div>
           
@@ -54,7 +55,7 @@ const Navbar: React.FC = () => {
             <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4">Contact</a>
             <div className="px-4">
               <Button className="w-full bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
-                Register Now
+                Call Me
               </Button>
             </div>
           </div>

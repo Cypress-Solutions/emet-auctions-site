@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'lucide-react';
 
@@ -5,11 +6,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#030009] text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              Premium<span className="text-brand-gold">Auctions</span>
+              EMET<span className="text-brand-gold">Auctions</span>
             </h3>
             <p className="text-white/70 mb-4">
               Connecting collectors with extraordinary items through transparent, 
@@ -41,18 +42,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          {/* Auction Categories */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Auction Categories</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-white/70 hover:text-brand-gold transition-colors">Fine Art</a></li>
-              <li><a href="#" className="text-white/70 hover:text-brand-gold transition-colors">Luxury Vehicles</a></li>
-              <li><a href="#" className="text-white/70 hover:text-brand-gold transition-colors">Watches & Jewelry</a></li>
-              <li><a href="#" className="text-white/70 hover:text-brand-gold transition-colors">Collectibles</a></li>
-              <li><a href="#" className="text-white/70 hover:text-brand-gold transition-colors">Rare Books</a></li>
-            </ul>
-          </div>
-          
           {/* Newsletter */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
@@ -79,7 +68,7 @@ const Footer: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm">
-            &copy; {new Date().getFullYear()} Premium Auctions. All rights reserved.
+            &copy; {new Date().getFullYear()} EMET Auctions. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-white/50 text-sm hover:text-brand-gold transition-colors">
