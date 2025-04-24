@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             </p>
             <form className="flex">
               <input type="email" placeholder="Your email" className="bg-white/10 text-white px-4 py-2 rounded-l outline-none focus:bg-white/20 transition-colors flex-1" />
-              <button type="submit" className="bg-brand-gold text-brand-purple-dark px-4 py-2 rounded-r font-medium hover:bg-white transition-colors">
+              <button type="submit" className="bg-brand-gold text-brand-purple-dark px-4 py-2 rounded-r font-medium hover:bg-white transition-colors text-brand-primary">
                 Join
               </button>
             </form>
