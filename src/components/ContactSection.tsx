@@ -1,19 +1,15 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Contact form submitted');
   };
-
-  return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50">
+  return <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#030009] mb-4">
@@ -49,7 +45,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-white/70">+1 (555) 123-4567</p>
+                    <p className="text-white/70">+27 76 444 3584</p>
                   </div>
                 </div>
               </div>
@@ -71,57 +67,31 @@ const ContactSection: React.FC = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Name
                   </label>
-                  <Input 
-                    id="name"
-                    type="text" 
-                    placeholder="Your full name" 
-                    className="w-full"
-                    required
-                  />
+                  <Input id="name" type="text" placeholder="Your full name" className="w-full" required />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email
                   </label>
-                  <Input 
-                    id="email"
-                    type="email" 
-                    placeholder="Your email address" 
-                    className="w-full"
-                    required
-                  />
+                  <Input id="email" type="email" placeholder="Your email address" className="w-full" required />
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                     Subject
                   </label>
-                  <Input 
-                    id="subject"
-                    type="text" 
-                    placeholder="How can we help?" 
-                    className="w-full"
-                    required
-                  />
+                  <Input id="subject" type="text" placeholder="How can we help?" className="w-full" required />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message
                   </label>
-                  <Textarea 
-                    id="message"
-                    placeholder="Tell us more about your inquiry..." 
-                    className="w-full min-h-32"
-                    required
-                  />
+                  <Textarea id="message" placeholder="Tell us more about your inquiry..." className="w-full min-h-32" required />
                 </div>
                 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-[#5e17eb] hover:bg-[#4a12c5] text-white"
-                >
+                <Button type="submit" className="w-full bg-[#5e17eb] hover:bg-[#4a12c5] text-white">
                   Send Message
                 </Button>
               </form>
@@ -129,8 +99,6 @@ const ContactSection: React.FC = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
