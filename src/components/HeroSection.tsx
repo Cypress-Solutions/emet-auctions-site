@@ -40,11 +40,11 @@ const HeroSection: React.FC = () => {
           </span>
         </h1>
         
-        <div className="mt-12 flex justify-center space-x-6 animate-fade-up [animation-delay:800ms]">
+        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 sm:space-x-6 animate-fade-up [animation-delay:800ms]">
           <Button 
             size="lg" 
             onClick={() => setIsModalOpen(true)}
-            className="bg-[#5e17eb] text-white hover:bg-[#4a12c5] transition-all duration-500 shadow-lg shadow-[#5e17eb]/20 hover:shadow-[#5e17eb]/40 hover:scale-105 hover:-translate-y-1"
+            className="w-full sm:w-auto bg-[#5e17eb] text-white hover:bg-[#5e17eb]/90 transition-all duration-500 shadow-lg shadow-[#5e17eb]/20 hover:shadow-[#5e17eb]/40 hover:scale-105 hover:-translate-y-1"
           >
             Sell Your Items
           </Button>
@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
             size="lg" 
             variant="outline"
             onClick={() => scrollToSection('#contact')}
-            className="border-[#5e17eb] text-[#5e17eb] bg-white hover:bg-[#5e17eb] hover:text-white transition-all duration-500 shadow-lg hover:shadow-[#5e17eb]/40 hover:scale-105 hover:-translate-y-1"
+            className="w-full sm:w-auto border-[#5e17eb] text-[#5e17eb] bg-white hover:bg-[#5e17eb] hover:text-white transition-all duration-500 shadow-lg hover:shadow-[#5e17eb]/40 hover:scale-105 hover:-translate-y-1"
           >
             Request a Callback
           </Button>

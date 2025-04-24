@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -9,7 +8,6 @@ const CurrentItems: React.FC = () => {
 
   return (
     <section id="current-items" className="relative py-32 overflow-hidden">
-      {/* Premium animated background */}
       <div className="absolute inset-0 bg-[#5e17eb]">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute w-[500px] h-[500px] rounded-full bg-white/20 -top-48 -left-24 blur-3xl animate-pulse"></div>
@@ -18,9 +16,8 @@ const CurrentItems: React.FC = () => {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="container relative mx-auto px-4 md:px-6 text-center">
-        <div className="max-w-3xl mx-auto">
+      <div className="container mx-auto px-4 md:px-6 relative">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-up">
             Auction Listings Coming Soon
           </h2>
@@ -31,7 +28,7 @@ const CurrentItems: React.FC = () => {
           <Button 
             size="lg"
             onClick={() => setIsModalOpen(true)}
-            className="group bg-white text-[#5e17eb] hover:bg-white/90 transition-all duration-500 animate-fade-up [animation-delay:400ms] shadow-lg hover:shadow-white/20 hover:scale-105 hover:-translate-y-1"
+            className="w-full sm:w-auto bg-white text-[#5e17eb] hover:bg-white/90 transition-all duration-500 animate-fade-up [animation-delay:400ms] shadow-lg hover:shadow-white/20 hover:scale-105 hover:-translate-y-1"
           >
             Start Selling Now
             <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
@@ -39,7 +36,6 @@ const CurrentItems: React.FC = () => {
         </div>
       </div>
 
-      {/* Modal for the Sell Form */}
       <SellForm open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
