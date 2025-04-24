@@ -1,10 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import SellForm from './SellForm';
 
 const HeroSection: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const scrollToSection = (id: string) => {
     const section = document.querySelector(id);
     if (section) {
@@ -45,22 +47,13 @@ const HeroSection: React.FC = () => {
         </h1>
         
         <div className="mt-12 flex justify-center space-x-6 animate-fade-up [animation-delay:800ms]">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button 
-                size="lg" 
-                className="bg-[#5e17eb] text-white hover:bg-[#4a12c5] transition-all duration-500 shadow-lg shadow-[#5e17eb]/20 hover:shadow-[#5e17eb]/40 hover:scale-105 hover:-translate-y-1"
-              >
-                Sell Your Items
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold">Sell Your Items</DialogTitle>
-              </DialogHeader>
-              <SellForm />
-            </DialogContent>
-          </Dialog>
+          <Button 
+            size="lg" 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#5e17eb] text-white hover:bg-[#4a12c5] transition-all duration-500 shadow-lg shadow-[#5e17eb]/20 hover:shadow-[#5e17eb]/40 hover:scale-105 hover:-translate-y-1"
+          >
+            Sell Your Items
+          </Button>
           
           <Button 
             size="lg" 
@@ -72,6 +65,9 @@ const HeroSection: React.FC = () => {
           </Button>
         </div>
       </div>
+
+      {/* Modal for the Sell Form */}
+      <SellForm open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 };
