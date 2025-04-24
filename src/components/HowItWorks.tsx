@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ShoppingBag, ClipboardList, Calendar, CreditCard } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -76,18 +77,18 @@ const HowItWorks: React.FC = () => {
             <h3 className="text-2xl font-semibold text-[#030009] mb-12 text-center">For Buyers</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {buyerSteps.map((step, index) => (
-                <Card key={index} className="relative group bg-white hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="bg-[#5e17eb] text-white rounded-full w-12 h-12 flex items-center justify-center mb-6">
+                <Card key={index} className="relative group bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
+                  <CardContent className="p-8">
+                    <div className="bg-[#5e17eb] text-white rounded-xl w-14 h-14 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       {step.icon}
                     </div>
-                    <div className="text-4xl font-bold text-[#5e17eb] mb-4">{step.number}</div>
+                    <div className="text-4xl font-bold text-[#5e17eb]/20 mb-4">{step.number}</div>
                     <h3 className="text-xl font-semibold text-[#030009] mb-3">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </CardContent>
                   
                   {index < buyerSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/30"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/10"></div>
                   )}
                 </Card>
               ))}
@@ -99,18 +100,18 @@ const HowItWorks: React.FC = () => {
             <h3 className="text-2xl font-semibold text-[#030009] mb-12 text-center">For Sellers</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {sellerSteps.map((step, index) => (
-                <Card key={index} className="relative group bg-white hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="bg-[#5e17eb] text-white rounded-full w-12 h-12 flex items-center justify-center mb-6">
+                <Card key={index} className="relative group bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
+                  <CardContent className="p-8">
+                    <div className="bg-[#5e17eb] text-white rounded-xl w-14 h-14 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       {step.icon}
                     </div>
-                    <div className="text-4xl font-bold text-[#5e17eb] mb-4">{step.number}</div>
+                    <div className="text-4xl font-bold text-[#5e17eb]/20 mb-4">{step.number}</div>
                     <h3 className="text-xl font-semibold text-[#030009] mb-3">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </CardContent>
                   
                   {index < sellerSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/30"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/10"></div>
                   )}
                 </Card>
               ))}

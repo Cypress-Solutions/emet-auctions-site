@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import CurrentItems from '@/components/CurrentItems';
 import HowItWorks from '@/components/HowItWorks';
-import SellForm from '@/components/SellForm';
+import SellBanner from '@/components/SellBanner';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -17,7 +17,7 @@ const Index = () => {
       <AboutSection />
       <CurrentItems />
       <HowItWorks />
-      <SellForm />
+      <SellBanner />
       <ContactSection />
       <Footer />
     </div>
