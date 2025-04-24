@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#030009] shadow-md py-2' : 'bg-transparent py-4'
+      isScrolled ? 'bg-[#5e17eb] shadow-md py-2' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
@@ -27,12 +27,12 @@ const Navbar: React.FC = () => {
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-white hover:text-[#5e17eb] transition-colors">About</a>
-            <a href="#current-items" className="text-white hover:text-[#5e17eb] transition-colors">Current Items</a>
-            <a href="#how-it-works" className="text-white hover:text-[#5e17eb] transition-colors">How It Works</a>
-            <a href="#sell-form" className="text-white hover:text-[#5e17eb] transition-colors">Sell Items</a>
-            <a href="#contact" className="text-white hover:text-[#5e17eb] transition-colors">Contact</a>
-            <Button className="bg-[#5e17eb] text-white hover:bg-white hover:text-[#5e17eb]">
+            <a href="#about" className="text-white hover:text-white/80 transition-colors">About</a>
+            <a href="#current-items" className="text-white hover:text-white/80 transition-colors">Current Items</a>
+            <a href="#how-it-works" className="text-white hover:text-white/80 transition-colors">How It Works</a>
+            <a href="#sell-form" className="text-white hover:text-white/80 transition-colors">Sell Items</a>
+            <a href="#contact" className="text-white hover:text-white/80 transition-colors">Contact</a>
+            <Button className="bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
               Register Now
             </Button>
           </div>
@@ -46,14 +46,14 @@ const Navbar: React.FC = () => {
         </div>
         
         {isMobileMenuOpen && (
-          <div className="mt-4 py-4 md:hidden flex flex-col space-y-4 bg-[#030009] animate-fade-in">
-            <a href="#about" className="text-white hover:text-[#5e17eb] transition-colors px-4">About</a>
-            <a href="#current-items" className="text-white hover:text-[#5e17eb] transition-colors px-4">Current Items</a>
-            <a href="#how-it-works" className="text-white hover:text-[#5e17eb] transition-colors px-4">How It Works</a>
-            <a href="#sell-form" className="text-white hover:text-[#5e17eb] transition-colors px-4">Sell Items</a>
-            <a href="#contact" className="text-white hover:text-[#5e17eb] transition-colors px-4">Contact</a>
+          <div className="mt-4 py-4 md:hidden flex flex-col space-y-4 bg-[#5e17eb] animate-fade-in">
+            <a href="#about" className="text-white hover:text-white/80 transition-colors px-4">About</a>
+            <a href="#current-items" className="text-white hover:text-white/80 transition-colors px-4">Current Items</a>
+            <a href="#how-it-works" className="text-white hover:text-white/80 transition-colors px-4">How It Works</a>
+            <a href="#sell-form" className="text-white hover:text-white/80 transition-colors px-4">Sell Items</a>
+            <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4">Contact</a>
             <div className="px-4">
-              <Button className="w-full bg-[#5e17eb] text-white hover:bg-white hover:text-[#5e17eb]">
+              <Button className="w-full bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
                 Register Now
               </Button>
             </div>

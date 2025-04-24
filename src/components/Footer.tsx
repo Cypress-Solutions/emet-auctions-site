@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Link } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-brand-purple-dark text-white pt-16 pb-8">
+    <footer className="bg-[#030009] text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Company Info */}
