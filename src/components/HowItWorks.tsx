@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { User, Gavel, Package, Tag } from 'lucide-react';
 
@@ -54,7 +53,7 @@ const HowItWorks: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">How It Works</h2>
-          <div className="w-24 h-1 bg-brand-gold mx-auto"></div>
+          <div className="w-24 h-1 bg-white mx-auto"></div>
         </div>
         
         <div className="space-y-16">
@@ -63,15 +62,15 @@ const HowItWorks: React.FC = () => {
             <h3 className="text-2xl font-semibold text-white mb-8 text-center">For Buyers</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {buyerSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-white/10 rounded-lg p-8 border border-white/20 hover:border-brand-gold transition-all duration-300">
-                    <div className="text-4xl font-bold text-brand-gold mb-4">{step.number}</div>
+                <div key={index} className="relative group">
+                  <div className="bg-white/10 rounded-lg p-8 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-white">
+                    <div className="text-4xl font-bold text-white mb-4">{step.number}</div>
                     <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
                     <p className="text-white/70">{step.description}</p>
                   </div>
                   
                   {index < buyerSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-brand-gold/30"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-white/30"></div>
                   )}
                 </div>
               ))}
@@ -83,15 +82,15 @@ const HowItWorks: React.FC = () => {
             <h3 className="text-2xl font-semibold text-white mb-8 text-center">For Sellers</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {sellerSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-white/10 rounded-lg p-8 border border-white/20 hover:border-brand-gold transition-all duration-300">
-                    <div className="text-4xl font-bold text-brand-gold mb-4">{step.number}</div>
+                <div key={index} className="relative group">
+                  <div className="bg-white/10 rounded-lg p-8 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-white">
+                    <div className="text-4xl font-bold text-white mb-4">{step.number}</div>
                     <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
                     <p className="text-white/70">{step.description}</p>
                   </div>
                   
                   {index < sellerSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-brand-gold/30"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-white/30"></div>
                   )}
                 </div>
               ))}
