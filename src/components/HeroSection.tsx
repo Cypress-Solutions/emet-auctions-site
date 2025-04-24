@@ -28,27 +28,27 @@ const HeroSection: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-8">
+            <h1 className="font-bold text-white leading-tight animate-fade-up [animation-delay:300ms]">
+              <span className="block text-7xl md:text-8xl lg:text-9xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up">EMET</span>
+              <span className="block text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:400ms]">Auctions</span>
+            </h1>
+            
             <img 
               src="/lovable-uploads/2d180b97-5ff3-42a4-84e2-35c59a3e7e07.png" 
               alt="EMET Auctions Logo" 
-              className="h-20 animate-fade-up"
+              className="h-20 animate-fade-up [animation-delay:600ms]"
             />
             
-            <h1 className="font-bold text-white leading-tight animate-fade-up [animation-delay:300ms]">
-              <span className="block text-6xl md:text-7xl lg:text-8xl mb-4">EMET</span>
-              <span className="block text-5xl md:text-6xl lg:text-7xl">Auctions</span>
-            </h1>
-            
-            <p className="text-xl text-white/90 max-w-xl animate-fade-up [animation-delay:600ms]">
+            <p className="text-xl text-white/90 max-w-xl animate-fade-up [animation-delay:800ms]">
               Simple, direct, and professional auction services for buyers and sellers alike.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up [animation-delay:900ms]">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up [animation-delay:1000ms]">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button 
                     size="lg" 
-                    className="bg-[#5e17eb] text-white hover:bg-[#4a12c5] transition-all"
+                    className="bg-[#5e17eb] text-white hover:bg-[#4a12c5] transition-all shadow-lg shadow-[#5e17eb]/20"
                   >
                     Sell Your Items
                   </Button>
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
                 size="lg" 
                 variant="outline"
                 onClick={() => scrollToSection('#contact')}
-                className="border-[#5e17eb] text-[#5e17eb] bg-white hover:bg-[#5e17eb] hover:text-white"
+                className="border-[#5e17eb] text-[#5e17eb] bg-white hover:bg-[#5e17eb] hover:text-white transition-all shadow-lg"
               >
                 Request a Callback
               </Button>
@@ -73,42 +73,40 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Right content - Features */}
-          <div className="hidden md:flex flex-col space-y-6 animate-fade-up [animation-delay:1200ms]">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 transform transition-all hover:translate-y-[-5px]">
-              <div className="flex items-start space-x-4">
-                <div className="bg-[#5e17eb] p-3 rounded-lg">
-                  <Gavel className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Professional Auctions</h3>
-                  <p className="text-white/70">Expert services with transparent bidding and fair pricing.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 transform transition-all hover:translate-y-[-5px]">
-              <div className="flex items-start space-x-4">
-                <div className="bg-[#5e17eb] p-3 rounded-lg">
-                  <Tag className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Competitive Prices</h3>
-                  <p className="text-white/70">Get the best value for your items with our network of buyers.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 transform transition-all hover:translate-y-[-5px]">
-              <div className="flex items-start space-x-4">
-                <div className="bg-[#5e17eb] p-3 rounded-lg">
-                  <Award className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Trusted Service</h3>
-                  <p className="text-white/70">Join our community of satisfied buyers and sellers.</p>
+          <div className="hidden md:flex flex-col space-y-6">
+            {[
+              {
+                icon: <Gavel className="text-white" size={24} />,
+                title: "Professional Auctions",
+                description: "Expert services with transparent bidding and fair pricing."
+              },
+              {
+                icon: <Tag className="text-white" size={24} />,
+                title: "Competitive Prices",
+                description: "Get the best value for your items with our network of buyers."
+              },
+              {
+                icon: <Award className="text-white" size={24} />,
+                title: "Trusted Service",
+                description: "Join our community of satisfied buyers and sellers."
+              }
+            ].map((feature, index) => (
+              <div 
+                key={index}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 transform transition-all hover:translate-y-[-5px] hover:bg-white/10 animate-fade-up"
+                style={{ animationDelay: `${1200 + index * 200}ms` }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="bg-[#5e17eb] p-3 rounded-lg">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-white/70">{feature.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
