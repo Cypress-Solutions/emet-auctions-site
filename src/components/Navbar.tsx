@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
@@ -24,17 +23,16 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center space-x-4">
             <img src="/lovable-uploads/7fd90f24-61ba-4d4c-9889-f111e221065c.png" alt="EMET Auctions" className="h-12 w-auto" />
-            <span className="text-2xl font-bold text-white">EMET Auctions</span>
+            <span className="text-xl md:text-2xl font-bold text-white truncate">EMET Auctions</span>
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-white hover:text-white/80 transition-colors">About</a>
-            <a href="#current-items" className="text-white hover:text-white/80 transition-colors">Current Items</a>
+            <a href="#current-items" className="text-white hover:text-white/80 transition-colors">Auctions</a>
             <a href="#how-it-works" className="text-white hover:text-white/80 transition-colors">How It Works</a>
-            <a href="#sell-form" className="text-white hover:text-white/80 transition-colors">Sell Items</a>
             <a href="#contact" className="text-white hover:text-white/80 transition-colors">Contact</a>
             <Button className="bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
-              Call Me
+              Online Auctions
             </Button>
           </div>
           
@@ -49,13 +47,12 @@ const Navbar: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="mt-4 py-4 md:hidden flex flex-col space-y-4 bg-[#5e17eb] animate-fade-in">
             <a href="#about" className="text-white hover:text-white/80 transition-colors px-4">About</a>
-            <a href="#current-items" className="text-white hover:text-white/80 transition-colors px-4">Current Items</a>
+            <a href="#current-items" className="text-white hover:text-white/80 transition-colors px-4">Auctions</a>
             <a href="#how-it-works" className="text-white hover:text-white/80 transition-colors px-4">How It Works</a>
-            <a href="#sell-form" className="text-white hover:text-white/80 transition-colors px-4">Sell Items</a>
             <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4">Contact</a>
             <div className="px-4">
               <Button className="w-full bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
-                Call Me
+                Online Auctions
               </Button>
             </div>
           </div>

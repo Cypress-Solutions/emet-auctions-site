@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Timer } from 'lucide-react';
 import SellForm from './SellForm';
 
 const CurrentItems: React.FC = () => {
@@ -19,20 +20,27 @@ const CurrentItems: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-up">
-            Auction Listings Coming Soon
+            Online Auctions Platform
           </h2>
           <div className="w-24 h-1 bg-white/30 mx-auto mb-8"></div>
-          <p className="text-xl text-white/80 leading-relaxed animate-fade-up [animation-delay:200ms] mb-12">
-            Be among the first to showcase your valuable items. Join our exclusive community of sellers and reach premium buyers.
+          <p className="text-xl text-white/80 leading-relaxed animate-fade-up [animation-delay:200ms] mb-8">
+            Experience the thrill of live bidding from anywhere in the world. Our online auction platform 
+            brings exclusive items directly to your screen, with real-time bidding and instant notifications.
           </p>
-          <Button 
-            size="lg"
-            onClick={() => setIsModalOpen(true)}
-            className="w-full sm:w-auto bg-white text-[#5e17eb] hover:bg-white/90 transition-all duration-500 animate-fade-up [animation-delay:400ms] shadow-lg hover:shadow-white/20 hover:scale-105 hover:-translate-y-1"
-          >
-            Start Selling Now
-            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <div className="flex flex-col items-center space-y-6">
+            <div className="flex items-center justify-center space-x-2 text-white/80">
+              <Timer className="w-6 h-6" />
+              <span className="text-lg">Next auction starts in 2 days</span>
+            </div>
+            <Button 
+              size="lg"
+              onClick={() => setIsModalOpen(true)}
+              className="w-full sm:w-auto bg-white text-[#5e17eb] hover:bg-white/90 transition-all duration-500 animate-fade-up [animation-delay:400ms] shadow-lg hover:shadow-white/20 hover:scale-105 hover:-translate-y-1 group px-8 py-6 text-lg font-semibold"
+            >
+              Join Next Auction
+              <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
         </div>
       </div>
 

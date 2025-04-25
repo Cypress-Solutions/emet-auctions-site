@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Link } from 'lucide-react';
+
 const Footer: React.FC = () => {
   return <footer className="bg-[#030009] text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -7,18 +8,12 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              EMET<span className="text-brand-gold"> Auctions</span>
+              EMET<span className="text-brand-gold"> Auctions</span>
             </h3>
             <p className="text-white/70 mb-4">
               Connecting collectors with extraordinary items through transparent, 
               secure auction processes.
             </p>
-            <div className="flex space-x-4 mt-6">
-              {['facebook', 'instagram', 'twitter', 'linkedin'].map(social => <a key={social} href={`#${social}`} className="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">
-                  <span className="sr-only">{social}</span>
-                  <Link size={16} />
-                </a>)}
-            </div>
           </div>
           
           {/* Quick Links */}
@@ -34,15 +29,22 @@ const Footer: React.FC = () => {
           </div>
           
           {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
-            <p className="text-white/70 mb-4">
-              Subscribe to receive notifications about upcoming auctions.
+          <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
+            <h4 className="text-lg font-semibold mb-4">Join Our Exclusive Auctions</h4>
+            <p className="text-white/70 mb-6">
+              Be the first to know about upcoming auctions and receive exclusive invitations to premium events.
             </p>
-            <form className="flex">
-              <input type="email" placeholder="Your email" className="bg-white/10 text-white px-4 py-2 rounded-l outline-none focus:bg-white/20 transition-colors flex-1" />
-              <button type="submit" className="bg-brand-gold text-brand-purple-dark px-4 py-2 rounded-r font-medium hover:bg-white transition-colors text-brand-primary">
-                Join
+            <form className="space-y-4">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="w-full bg-white/10 text-white px-4 py-3 rounded-lg outline-none focus:bg-white/20 transition-colors border border-white/20 focus:border-white/40" 
+              />
+              <button 
+                type="submit" 
+                className="w-full bg-brand-gold text-brand-purple-dark px-6 py-3 rounded-lg font-semibold hover:bg-white transition-colors text-brand-primary shadow-lg hover:shadow-brand-gold/20"
+              >
+                Subscribe Now
               </button>
             </form>
           </div>
@@ -69,4 +71,5 @@ const Footer: React.FC = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
