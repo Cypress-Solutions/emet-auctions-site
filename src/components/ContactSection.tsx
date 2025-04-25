@@ -12,16 +12,17 @@ const ContactSection: React.FC = () => {
     console.log('Contact form submitted');
   };
 
-  return <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+  return (
+    <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#030009] mb-4">
-            Premium Support
+            Contact Us - Sell Your Items
           </h2>
           <div className="w-24 h-1 bg-[#5e17eb] mx-auto"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-            Our dedicated team of auction specialists is here to provide personalized assistance 
-            for all your premium auction needs.
+            Ready to turn your valuable items into profit? Connect with our auction experts 
+            and start your selling journey today.
           </p>
         </div>
         
@@ -29,7 +30,7 @@ const ContactSection: React.FC = () => {
           {/* Contact Information */}
           <Card className="bg-gradient-to-br from-[#5e17eb] to-[#4a12c5] text-white">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold mb-8">Exclusive Support</h3>
+              <h3 className="text-2xl font-semibold mb-8">Auction Selling Inquiries</h3>
               
               <div className="space-y-8">
                 <div className="flex items-start">
@@ -37,8 +38,8 @@ const ContactSection: React.FC = () => {
                     <Mail className="h-6 w-6 text-white/80" />
                   </div>
                   <div>
-                    <p className="font-medium text-lg">Email</p>
-                    <p className="text-white/80 text-lg">info@emetauctions.com</p>
+                    <p className="font-medium text-lg">Email Auction Team</p>
+                    <p className="text-white/80 text-lg">sellers@emetauctions.com</p>
                   </div>
                 </div>
                 
@@ -47,18 +48,18 @@ const ContactSection: React.FC = () => {
                     <Phone className="h-6 w-6 text-white/80" />
                   </div>
                   <div>
-                    <p className="font-medium text-lg">Phone</p>
+                    <p className="font-medium text-lg">Seller Hotline</p>
                     <p className="text-white/80 text-lg">+27 76 444 3584</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-12">
-                <h4 className="text-xl font-medium mb-4">Business Hours</h4>
+                <h4 className="text-xl font-medium mb-4">Auction Consultation Hours</h4>
                 <div className="space-y-2 text-white/80 text-lg">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Sunday: Consultation by Appointment</p>
                 </div>
               </div>
             </CardContent>
@@ -84,18 +85,18 @@ const ContactSection: React.FC = () => {
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
+                    Auction Item Type
                   </label>
-                  <Input id="subject" type="text" placeholder="How can we assist you?" className="w-full py-3" required />
+                  <Input id="subject" type="text" placeholder="What item are you looking to sell?" className="w-full py-3" required />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    Item Description
                   </label>
                   <Textarea 
                     id="message" 
-                    placeholder="Please provide details about your inquiry..." 
+                    placeholder="Provide details about your auction item..." 
                     className="w-full min-h-32 resize-none" 
                     required 
                   />
@@ -106,14 +107,16 @@ const ContactSection: React.FC = () => {
                   size="lg"
                   className="w-full bg-[#5e17eb] hover:bg-[#4a12c5] text-white shadow-lg hover:shadow-[#5e17eb]/20"
                 >
-                  Send Message
+                  Submit Auction Inquiry
                 </Button>
               </form>
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default ContactSection;
+
