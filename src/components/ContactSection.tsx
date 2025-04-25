@@ -1,19 +1,15 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Contact form submitted');
   };
-
-  return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+  return <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#030009] mb-4">
@@ -48,7 +44,7 @@ const ContactSection: React.FC = () => {
                     <Phone className="h-6 w-6 text-white/80" />
                   </div>
                   <div>
-                    <p className="font-medium text-lg">Seller Hotline</p>
+                    <p className="font-medium text-lg">Call Us</p>
                     <p className="text-white/80 text-lg">+27 76 444 3584</p>
                   </div>
                 </div>
@@ -94,19 +90,10 @@ const ContactSection: React.FC = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Item Description
                   </label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Provide details about your auction item..." 
-                    className="w-full min-h-32 resize-none" 
-                    required 
-                  />
+                  <Textarea id="message" placeholder="Provide details about your auction item..." className="w-full min-h-32 resize-none" required />
                 </div>
                 
-                <Button 
-                  type="submit" 
-                  size="lg"
-                  className="w-full bg-[#5e17eb] hover:bg-[#4a12c5] text-white shadow-lg hover:shadow-[#5e17eb]/20"
-                >
+                <Button type="submit" size="lg" className="w-full bg-[#5e17eb] hover:bg-[#4a12c5] text-white shadow-lg hover:shadow-[#5e17eb]/20">
                   Submit Auction Inquiry
                 </Button>
               </form>
@@ -114,9 +101,6 @@ const ContactSection: React.FC = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
-
