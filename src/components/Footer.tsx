@@ -1,8 +1,8 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
-  return <footer className="bg-[#030009] text-white pt-16 pb-8">
+  return (
+    <footer className="bg-[#030009] text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Company Info */}
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               />
               <button 
                 type="submit" 
-                className="w-full bg-brand-gold text-brand-purple-dark px-6 py-3 rounded-lg font-semibold hover:bg-white transition-colors text-brand-primary shadow-lg hover:shadow-brand-gold/20"
+                className="w-full bg-white hover:bg-white/90 text-[#030009] px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg"
               >
                 Subscribe Now
               </button>
@@ -69,7 +69,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 
 export default Footer;

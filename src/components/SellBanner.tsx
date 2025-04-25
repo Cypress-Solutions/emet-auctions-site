@@ -20,12 +20,12 @@ const SellBanner: React.FC = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Transform Your Valuables into Opportunities
+            Ready to Turn Your Items into Opportunities?
           </h2>
           
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Join our exclusive auction platform where premium items find their perfect match. 
-            Our expert team ensures maximum value for your cherished possessions.
+            Join our exclusive auction platform and connect with serious buyers. 
+            List your valuable items today and reach a wider audience of collectors and enthusiasts.
           </p>
           
           <button

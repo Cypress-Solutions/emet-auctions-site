@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ShoppingBag, ClipboardList, Calendar, CreditCard } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -75,7 +74,7 @@ const HowItWorks: React.FC = () => {
           {/* Buyers Section */}
           <div>
             <h3 className="text-2xl font-semibold text-[#030009] mb-12 text-center">For Buyers</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
               {buyerSteps.map((step, index) => (
                 <Card key={index} className="relative group bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
                   <CardContent className="p-8">
@@ -86,19 +85,20 @@ const HowItWorks: React.FC = () => {
                     <h3 className="text-xl font-semibold text-[#030009] mb-3">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </CardContent>
-                  
-                  {index < buyerSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/10"></div>
-                  )}
                 </Card>
               ))}
+              
+              {/* Flow animation line */}
+              <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#5e17eb]/0 via-[#5e17eb]/20 to-[#5e17eb]/0">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#5e17eb] to-transparent animate-[flow_2s_linear_infinite]"></div>
+              </div>
             </div>
           </div>
 
           {/* Sellers Section */}
           <div>
             <h3 className="text-2xl font-semibold text-[#030009] mb-12 text-center">For Sellers</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
               {sellerSteps.map((step, index) => (
                 <Card key={index} className="relative group bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
                   <CardContent className="p-8">
@@ -109,12 +109,13 @@ const HowItWorks: React.FC = () => {
                     <h3 className="text-xl font-semibold text-[#030009] mb-3">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </CardContent>
-                  
-                  {index < sellerSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#5e17eb]/10"></div>
-                  )}
                 </Card>
               ))}
+              
+              {/* Flow animation line */}
+              <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#5e17eb]/0 via-[#5e17eb]/20 to-[#5e17eb]/0">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#5e17eb] to-transparent animate-[flow_2s_linear_infinite]"></div>
+              </div>
             </div>
           </div>
         </div>
