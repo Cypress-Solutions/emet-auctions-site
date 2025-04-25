@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -99,8 +100,10 @@ export default {
           '100%': { opacity: '1', transform: 'translateY(0)' }
         },
         flow: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' }
+          '0%': { transform: 'translateX(0%)' },
+          '50%': { transform: 'translateX(100%)' },
+          '50.01%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' }
         }
       },
       animation: {
@@ -108,7 +111,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 0.5s ease-out',
         'fade-up': 'fade-up 0.7s ease-out',
-        flow: 'flow 2s linear infinite'
+        'flow': 'flow 5s ease-in-out infinite'
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

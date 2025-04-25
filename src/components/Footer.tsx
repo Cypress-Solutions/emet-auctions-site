@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -21,9 +22,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><a href="#about" className="text-white/70 hover:text-brand-gold transition-colors">About Us</a></li>
-              <li><a href="#auctions" className="text-white/70 hover:text-brand-gold transition-colors">Featured Auctions</a></li>
+              <li><a href="#current-items" className="text-white/70 hover:text-brand-gold transition-colors">Current Items</a></li>
               <li><a href="#how-it-works" className="text-white/70 hover:text-brand-gold transition-colors">How It Works</a></li>
-              <li><a href="#testimonials" className="text-white/70 hover:text-brand-gold transition-colors">Testimonials</a></li>
+              <li><a href="#sell" className="text-white/70 hover:text-brand-gold transition-colors">Sell With Us</a></li>
               <li><a href="#contact" className="text-white/70 hover:text-brand-gold transition-colors">Contact Us</a></li>
             </ul>
           </div>
