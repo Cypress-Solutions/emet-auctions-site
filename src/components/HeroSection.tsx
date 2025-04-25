@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import SellForm from './SellForm';
@@ -32,10 +33,10 @@ const HeroSection: React.FC = () => {
         </div>
 
         <h1 className="w-full text-center font-bold text-white leading-tight">
-          <span className="block text-8xl md:text-9xl lg:text-[160px] mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:400ms]">
+          <span className="block text-5xl sm:text-8xl md:text-9xl lg:text-[160px] mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:400ms]">
             EMET
           </span>
-          <span className="block text-7xl md:text-8xl lg:text-[120px] bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:600ms]">
+          <span className="block text-4xl sm:text-7xl md:text-8xl lg:text-[120px] bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:600ms]">
             AUCTIONS
           </span>
         </h1>
