@@ -35,7 +35,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium text-lg">Email Auction Team</p>
-                    <p className="text-white/80 text-lg">sellers@emetauctions.com</p>
+                    <p className="text-white/80 text-lg">info@emet.africa</p>
                   </div>
                 </div>
                 
