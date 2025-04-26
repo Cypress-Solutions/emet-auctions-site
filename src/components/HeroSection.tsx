@@ -32,11 +32,12 @@ const HeroSection: React.FC = () => {
           />
         </div>
 
-        <h1 className="w-full text-center font-bold text-white leading-tight">
-          <span className="block text-5xl sm:text-8xl md:text-9xl lg:text-[160px] mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:400ms]">
+        <h1 className="w-full text-center font-bold text-white leading-tight tracking-tight">
+          <span className="block text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:400ms] hover:scale-105 transition-transform duration-500">
             EMET
           </span>
-          <span className="block text-4xl sm:text-7xl md:text-8xl lg:text-[120px] bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:600ms]">
+          <span className="relative block text-3xl sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/80 animate-fade-up [animation-delay:600ms] group">
+            <span className="absolute -inset-1 bg-gradient-to-r from-[#5e17eb]/20 to-transparent blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></span>
             AUCTIONS
           </span>
         </h1>

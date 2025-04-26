@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
@@ -14,6 +15,10 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleMenuItemClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -46,12 +51,12 @@ const Navbar: React.FC = () => {
         
         {isMobileMenuOpen && (
           <div className="mt-4 py-4 md:hidden flex flex-col space-y-4 bg-[#5e17eb] animate-fade-in">
-            <a href="#about" className="text-white hover:text-white/80 transition-colors px-4">About</a>
-            <a href="#current-items" className="text-white hover:text-white/80 transition-colors px-4">Auctions</a>
-            <a href="#how-it-works" className="text-white hover:text-white/80 transition-colors px-4">How It Works</a>
-            <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4">Contact</a>
+            <a href="#about" onClick={handleMenuItemClick} className="text-white hover:text-white/80 transition-colors px-4">About</a>
+            <a href="#current-items" onClick={handleMenuItemClick} className="text-white hover:text-white/80 transition-colors px-4">Auctions</a>
+            <a href="#how-it-works" onClick={handleMenuItemClick} className="text-white hover:text-white/80 transition-colors px-4">How It Works</a>
+            <a href="#contact" onClick={handleMenuItemClick} className="text-white hover:text-white/80 transition-colors px-4">Contact</a>
             <div className="px-4">
-              <Button className="w-full bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
+              <Button onClick={handleMenuItemClick} className="w-full bg-white text-[#5e17eb] hover:bg-white/90 hover:text-[#5e17eb]">
                 Online Auctions
               </Button>
             </div>
@@ -63,3 +68,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
